@@ -1,11 +1,8 @@
 import * as React from "react";
 import { useState, useContext, useEffect } from "react";
 import { TodosContext } from "../contexts/todosContext";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -42,9 +39,9 @@ export default function TodoList() {
 
   let todosToBeRendered = todos;
 
-  if (displayTodosType == "completed") {
+  if (displayTodosType === "completed") {
     todosToBeRendered = completedTodos;
-  } else if (displayTodosType == "non-completed") {
+  } else if (displayTodosType === "non-completed") {
     todosToBeRendered = notCompletedTodos;
   } else {
     todosToBeRendered = todos;
@@ -132,7 +129,7 @@ export default function TodoList() {
                 onClick={() => {
                   handleAddClick();
                 }}
-                disabled={titleInput.length == 0}
+                disabled={titleInput.length === 0}
               >
                 إضافة
               </Button>

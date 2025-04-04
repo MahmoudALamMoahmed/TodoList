@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -31,7 +30,7 @@ function Todo({ todo }) {
 
   function handleCheckClick() {
     const updatedTodos = todos.map((t) => {
-      if (t.id == todo.id) {
+      if (t.id === todo.id) {
         /* if (t.isCompleted == true) {
       t.isCompleted = false;
     } else {
@@ -61,7 +60,7 @@ function Todo({ todo }) {
       } else {
         return true;
       } */
-      return t.id != todo.id; // ShortCut to code that prev
+      return t.id !== todo.id; // ShortCut to code that prev
     });
     setTodos(deleteTodos);
     localStorage.setItem("todos", JSON.stringify(deleteTodos));
@@ -77,7 +76,7 @@ function Todo({ todo }) {
 
   function handleEditConfirm() {
     const editTodos = todos.map((t) => {
-      if (t.id == todo.id) {
+      if (t.id === todo.id) {
         return { ...t, title: editTodo.title, details: editTodo.details };
       } else {
         return t;

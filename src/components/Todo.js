@@ -207,9 +207,9 @@ function Todo({ todo }) {
                 className="iconButton"
                 aria-label="delete"
                 style={{
-                  color: todo.isCompleted == true ? "white" : "#8bc34a",
+                  color: todo.isCompleted === true ? "white" : "#8bc34a",
                   backgroundColor:
-                    todo.isCompleted == true ? "#8bc34a" : "white",
+                    todo.isCompleted === true ? "#8bc34a" : "white",
                   border: "solid #8bc34a 3px",
                 }}
               >

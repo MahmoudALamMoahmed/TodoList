@@ -69,7 +69,7 @@ export default function TodoList() {
       <Card>
         <CardContent>
           <Typography variant="h3" style={{ fontWeight: "normal" }}>
-            مهامي اليومية
+            المهام اليومية
           </Typography>
           <Divider />
 
@@ -78,7 +78,6 @@ export default function TodoList() {
             style={{
               direction: "ltr",
               marginTop: "20px",
-              marginBottom: "10px",
             }}
             color="primary"
             value={displayTodosType}

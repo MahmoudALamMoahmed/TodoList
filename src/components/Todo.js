@@ -165,7 +165,7 @@ function Todo({ todo }) {
       <Card
         className="todoCard"
         sx={{
-          width: "90%",
+          width: { xs: "80%", sm: "100%" },
           backgroundColor: "#283593",
           color: "white",
           marginTop: 2,
@@ -173,7 +173,7 @@ function Todo({ todo }) {
       >
         <CardContent>
           <Grid container>
-            <Grid size={6}>
+            <Grid size={8}>
               <Typography
                 variant="h6"
                 sx={{ textAlign: "right" }}
@@ -194,11 +194,12 @@ function Todo({ todo }) {
             </Grid>
             {/*Start Action Buttons Icons */}
             <Grid
-              size={6}
+              size={4}
               display="flex"
               justifyContent="space-around"
               alignItems="center"
-              flexWrap="wrap"
+              /* flexWrap="wrap" */
+              /* sx={{ paddingLeft: { xs: "20px" } }} */
             >
               {/* Icont right */}
               <IconButton
@@ -214,7 +215,7 @@ function Todo({ todo }) {
                   border: "solid #8bc34a 3px",
                 }}
               >
-                <CheckIcon />
+                <CheckIcon sx={{ fontSize: { xs: 15, sm: 24 } }} />
               </IconButton>
               {/* Icon right */}
 
@@ -227,12 +228,12 @@ function Todo({ todo }) {
                   color: "#1769aa",
                   backgroundColor: "white",
                   border: "solid #1769aa 3px",
-                  /* width:"40px",
-                  height:"40px", */
                 }}
                 onClick={handleEditClick}
               >
-                <ModeEditOutlineOutlinedIcon />
+                <ModeEditOutlineOutlinedIcon
+                  sx={{ fontSize: { xs: 15, sm: 24 } }}
+                />
               </IconButton>
               {/* Icon Edit */}
 
@@ -248,7 +249,9 @@ function Todo({ todo }) {
                 }}
                 onClick={handleDeleteClick}
               >
-                <DeleteOutlineOutlinedIcon />
+                <DeleteOutlineOutlinedIcon
+                  sx={{ fontSize: { xs: 15, sm: 24 } }}
+                />
               </IconButton>
 
               {/* Icon Delete */}

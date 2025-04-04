@@ -99,7 +99,7 @@ export default function TodoList() {
               overflow: "scroll",
               display: "flex",
               flexDirection: "column",
-              flexWrap: "nowrap",
+              alignItems: "center",
             }}
           >
             {todosJsx}

@@ -199,7 +199,7 @@ function Todo({ todo }) {
               justifyContent="space-around"
               alignItems="center"
               /* flexWrap="wrap" */
-              /* sx={{ paddingLeft: { xs: "20px" } }} */
+              sx={{ paddingLeft: { xs: "15px" } }}
             >
               {/* Icont right */}
               <IconButton

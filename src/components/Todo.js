@@ -172,8 +172,8 @@ function Todo({ todo }) {
         }}
       >
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid size={7}>
+          <Grid container>
+            <Grid size={6}>
               <Typography
                 variant="h6"
                 sx={{ textAlign: "right" }}
@@ -194,10 +194,11 @@ function Todo({ todo }) {
             </Grid>
             {/*Start Action Buttons Icons */}
             <Grid
-              size={5}
+              size={6}
               display="flex"
               justifyContent="space-around"
               alignItems="center"
+              flexWrap="wrap"
             >
               {/* Icont right */}
               <IconButton
@@ -226,6 +227,8 @@ function Todo({ todo }) {
                   color: "#1769aa",
                   backgroundColor: "white",
                   border: "solid #1769aa 3px",
+                  /* width:"40px",
+                  height:"40px", */
                 }}
                 onClick={handleEditClick}
               >

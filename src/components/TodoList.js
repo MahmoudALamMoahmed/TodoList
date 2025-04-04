@@ -66,7 +66,7 @@ export default function TodoList() {
 
   return (
     <Container maxWidth="sm">
-      <Card sx={{ minWidth: 275 }}>
+      <Card>
         <CardContent>
           <Typography variant="h3" style={{ fontWeight: "normal" }}>
             مهامي اليومية
@@ -99,7 +99,7 @@ export default function TodoList() {
               overflow: "scroll",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              flexWrap: "nowrap",
             }}
           >
             {todosJsx}

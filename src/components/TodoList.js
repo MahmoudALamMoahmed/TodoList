@@ -23,7 +23,7 @@ export default function TodoList() {
   useEffect(() => {
     const storageTodos = JSON.parse(localStorage.getItem("todos")) ?? [];
     setTodos(storageTodos);
-  }, []);
+  }, [setTodos]);
 
   function changeDisplayedType(e) {
     setDisplayTodosType(e.target.value);

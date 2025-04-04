@@ -165,7 +165,7 @@ function Todo({ todo }) {
       <Card
         className="todoCard"
         sx={{
-          width: { xs: "80%", sm: "100%" },
+          /*  width: { xs: "100%", sm: "100%" }, */
           backgroundColor: "#283593",
           color: "white",
           marginTop: 2,

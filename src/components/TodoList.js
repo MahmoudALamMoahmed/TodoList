@@ -96,9 +96,9 @@ export default function TodoList() {
             style={{
               maxHeight: "60vh",
               overflow: "scroll",
-              display: "flex",
+              /* display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              alignItems: "center", */
             }}
           >
             {todosJsx}

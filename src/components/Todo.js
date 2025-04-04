@@ -165,7 +165,7 @@ function Todo({ todo }) {
       <Card
         className="todoCard"
         sx={{
-          minWidth: 275,
+          width: "90%",
           backgroundColor: "#283593",
           color: "white",
           marginTop: 2,
@@ -173,7 +173,7 @@ function Todo({ todo }) {
       >
         <CardContent>
           <Grid container spacing={2}>
-            <Grid size={8}>
+            <Grid size={7}>
               <Typography
                 variant="h6"
                 sx={{ textAlign: "right" }}
@@ -194,7 +194,7 @@ function Todo({ todo }) {
             </Grid>
             {/*Start Action Buttons Icons */}
             <Grid
-              size={4}
+              size={5}
               display="flex"
               justifyContent="space-around"
               alignItems="center"

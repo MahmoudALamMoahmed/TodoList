@@ -93,7 +93,15 @@ export default function TodoList() {
           {/* End filter Buttons */}
 
           {/* Start Todos */}
-          <div style={{ maxHeight: "60vh", overflow: "scroll" }}>
+          <div
+            style={{
+              maxHeight: "60vh",
+              overflow: "scroll",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             {todosJsx}
           </div>
           {/* End Todos */}

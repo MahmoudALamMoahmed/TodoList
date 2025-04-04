@@ -86,8 +86,8 @@ export default function TodoList() {
             onChange={changeDisplayedType}
             aria-label="text alignment"
           >
-            <ToggleButton value="non-completed">الغير منجز</ToggleButton>
-            <ToggleButton value="completed">المنجز</ToggleButton>
+            <ToggleButton value="non-completed">لم تتم</ToggleButton>
+            <ToggleButton value="completed">تمت</ToggleButton>
             <ToggleButton value="all">الكل</ToggleButton>
           </ToggleButtonGroup>
           {/* End filter Buttons */}

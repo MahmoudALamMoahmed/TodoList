@@ -68,8 +68,8 @@ export default function TodoList() {
     <Container maxWidth="sm">
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
-          <Typography variant="h4" style={{ fontWeight: "normal" }}>
-            مهامي
+          <Typography variant="h3" style={{ fontWeight: "normal" }}>
+            مهامي اليومية
           </Typography>
           <Divider />
 

@@ -4,7 +4,6 @@ import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { TodosContext } from "./contexts/todosContext";
 
 //Others
-import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 const theme = createTheme({

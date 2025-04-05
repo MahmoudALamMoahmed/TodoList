@@ -187,7 +187,7 @@ function Todo({ todo }) {
               <Typography
                 variant="h6"
                 sx={{ textAlign: "right" }}
-                style={{ fontWeight: "200" }}
+                style={{ fontWeight: "100" }}
               >
                 {todo.details}
               </Typography>
@@ -199,25 +199,27 @@ function Todo({ todo }) {
               justifyContent="space-around"
               alignItems="center"
               /* flexWrap="wrap" */
-              sx={{ paddingLeft: { xs: "15px" } }}
+              flexDirection="row-reverse"
+              /* sx={{ paddingLeft: { sm: "15px" } }} */
             >
-              {/* Icont right */}
+              {/* Icon Delete */}
+
               <IconButton
-                onClick={() => {
-                  handleCheckClick();
-                }}
                 className="iconButton"
                 aria-label="delete"
                 style={{
-                  color: todo.isCompleted === true ? "white" : "#8bc34a",
-                  backgroundColor:
-                    todo.isCompleted === true ? "#8bc34a" : "white",
-                  border: "solid #8bc34a 3px",
+                  color: "#b23c17",
+                  backgroundColor: "white",
+                  border: "solid #b23c17 3px",
                 }}
+                onClick={handleDeleteClick}
               >
-                <CheckIcon sx={{ fontSize: { xs: 15, sm: 24 } }} />
+                <DeleteOutlineOutlinedIcon
+                  sx={{ fontSize: { xs: 15, sm: 24 } }}
+                />
               </IconButton>
-              {/* Icon right */}
+
+              {/* Icon Delete */}
 
               {/* Icon Edit */}
 
@@ -237,24 +239,23 @@ function Todo({ todo }) {
               </IconButton>
               {/* Icon Edit */}
 
-              {/* Icon Delete */}
-
+              {/* Icont right */}
               <IconButton
+                onClick={() => {
+                  handleCheckClick();
+                }}
                 className="iconButton"
                 aria-label="delete"
                 style={{
-                  color: "#b23c17",
-                  backgroundColor: "white",
-                  border: "solid #b23c17 3px",
+                  color: todo.isCompleted === true ? "white" : "#8bc34a",
+                  backgroundColor:
+                    todo.isCompleted === true ? "#8bc34a" : "white",
+                  border: "solid #8bc34a 3px",
                 }}
-                onClick={handleDeleteClick}
               >
-                <DeleteOutlineOutlinedIcon
-                  sx={{ fontSize: { xs: 15, sm: 24 } }}
-                />
+                <CheckIcon sx={{ fontSize: { xs: 15, sm: 24 } }} />
               </IconButton>
-
-              {/* Icon Delete */}
+              {/* Icon right */}
             </Grid>
             {/*End Action Buttons Icons */}
           </Grid>

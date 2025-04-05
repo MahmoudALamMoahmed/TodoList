@@ -76,4 +76,9 @@ box-shadow: 0px 7px  7px rgba(0, 0, 0, 0.4);
   src: url("../public/Fonts/Alexandria-Light.ttf");
   font-weight: 200;
 }
+@font-face {
+  font-family:Alexandria;
+  src: url("../public/Fonts/Alexandria-Thin.ttf");
+  font-weight: 100;
+}
 /* Fonts */

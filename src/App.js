@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { TodosContext } from "./contexts/todosContext";
 //Others
 import { useState } from "react";
-import { ToastContext, ToastProvider } from "./contexts/ToastContext";
+import { ToastProvider } from "./contexts/ToastContext";
 
 const theme = createTheme({
   typography: {

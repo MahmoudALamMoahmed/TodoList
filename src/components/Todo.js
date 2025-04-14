@@ -1,28 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+
 import Grid from "@mui/material/Grid";
 import CheckIcon from "@mui/icons-material/Check";
 import IconButton from "@mui/material/IconButton";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import { TodosContext } from "../contexts/todosContext";
-import { ToastContext, useToast } from "../contexts/ToastContext";
-
-//Import Dialog
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
-import { TextField } from "@mui/material";
+import { useToast } from "../contexts/ToastContext";
 
 function Todo({ todo, showDelete, showEdit }) {
-  const [editTodo, setEditTodo] = useState({
+  /* const [editTodo, setEditTodo] = useState({
     title: todo.title,
     details: todo.details,
-  });
+  }); */
   const { todos, setTodos } = useContext(TodosContext);
   const { showHideToast } = useToast(); //const { showHideToast } = useContext(ToastContext);
 

@@ -1,47 +1,92 @@
+// VisitCounter.js
 import React, { useEffect, useState } from "react";
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 
-const VisitorCounter = () => {
-  const [visits, setVisits] = useState(0);
+const firebaseConfig = {
+  apiKey: "AIzaSyA4yYvO8LUMrHUIZUNYLncvPwmHhN3d6",
+  authDomain: "visits-counter-1aec8.firebaseapp.com",
+  projectId: "visits-counter-1aec8",
+  storageBucket: "visits-counter-1aec8.firebasestorage.app",
+  messagingSenderId: "115706537971",
+  appId: "1:115706537971:web:9d9278d7d042171b7f9486",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const VisitCounter = () => {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const today = new Date().toISOString().slice(0, 10); // "2025-04-07"
-    const lastVisit = localStorage.getItem("lastVisitDate");
+    const visitToday = localStorage.getItem("visited_today");
 
-    if (lastVisit !== today) {
-      // أول زيارة لهذا اليوم → نزيد العداد
-      fetch("https://api.countapi.xyz/hit/todo-macoding.netlify.app/homepage")
-        .then((res) => res.json())
-        .then((data) => {
-          setVisits(data.value);
-          localStorage.setItem("lastVisitDate", today);
-        })
-        .catch((err) => console.error("Error updating visit count:", err));
+    const updateCount = async () => {
+      const counterRef = doc(db, "visits", "counter");
+      const snapshot = await getDoc(counterRef);
+
+      if (snapshot.exists()) {
+        await updateDoc(counterRef, { count: snapshot.data().count + 1 });
+        setCount(snapshot.data().count + 1);
+      } else {
+        await setDoc(counterRef, { count: 1 });
+        setCount(1);
+      }
+
+      // احفظ في localStorage إن المستخدم زار النهارده
+      localStorage.setItem("visited_today", new Date().toDateString());
+    };
+
+    const fetchCount = async () => {
+      const counterRef = doc(db, "visits", "counter");
+      const snapshot = await getDoc(counterRef);
+      if (snapshot.exists()) {
+        setCount(snapshot.data().count);
+      }
+    };
+
+    // لو المستخدم ما زاروش النهارده، نزيد العداد
+    if (visitToday !== new Date().toDateString()) {
+      updateCount();
     } else {
-      // زيارة مكررة بنفس اليوم → نقرأ الرقم فقط
-      fetch("https://api.countapi.xyz/get/todo-macoding.netlify.app/homepage")
-        .then((res) => res.json())
-        .then((data) => {
-          setVisits(data.value);
-        })
-        .catch((err) => console.error("Error fetching visit count:", err));
+      fetchCount();
     }
   }, []);
 
   return (
-    <div
-      style={{
-        fontSize: "16px",
-        fontWeight: "bold",
-        textAlign: "center",
-        marginTop: "20px",
-      }}
-    >
-      👁️‍🗨️ عدد الزيارات : {visits}
-      <div style={{ marginTop: "15px" }}>
-        نسألكم الدعاء لأبي ( الأستاذ : علم محمد ) بالرحمة والمغفرة{" "}
-      </div>
-    </div>
+    <p style={{ textAlign: "center", marginTop: "20px" }}>
+      👀 عدد الزيارات: {count}
+    </p>
   );
 };
 
-export default VisitorCounter;
+export default VisitCounter;
+
+/* // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA4yYvO8LUMrHUIZUNYLncvPwmHhN3d6-Y",
+  authDomain: "visits-counter-1aec8.firebaseapp.com",
+  projectId: "visits-counter-1aec8",
+  storageBucket: "visits-counter-1aec8.firebasestorage.app",
+  messagingSenderId: "115706537971",
+  appId: "1:115706537971:web:9d9278d7d042171b7f9486",
+  measurementId: "G-MC6B4XLSCF",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+ */

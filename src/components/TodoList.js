@@ -21,6 +21,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useToast } from "../contexts/ToastContext";
+import VisitorCounter from "./VisitorCounter";
 
 export default function TodoList() {
   const { todos, setTodos } = useContext(TodosContext); // {todos,setTodos} destructure  طلعلي التودوس والسيت تودوس علشان استخدمهم براحتي
@@ -299,6 +300,12 @@ export default function TodoList() {
             {/*End Input + Add Button */}
           </CardContent>
         </Card>
+        <Typography variant="h5" style={{ color: "gray" }}>
+          <VisitorCounter />
+        </Typography>
+        <Typography variant="h5" style={{ color: "gray" }}>
+          <VisitorCounter />
+        </Typography>
       </Container>
     </>
   );

@@ -9,22 +9,22 @@ import IconButton from "@mui/material/IconButton";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import { TodosContext } from "../contexts/todosContext";
+import { ToastContext, useToast } from "../contexts/ToastContext";
+
 //Import Dialog
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { TextField } from "@mui/material";
 
-function Todo({ todo }) {
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-  const [showEditDialog, setShowEditDialog] = useState(false);
+function Todo({ todo, showDelete, showEdit }) {
   const [editTodo, setEditTodo] = useState({
     title: todo.title,
     details: todo.details,
   });
   const { todos, setTodos } = useContext(TodosContext);
+  const { showHideToast } = useToast(); //const { showHideToast } = useContext(ToastContext);
 
   //Event Handlers
 
@@ -37,6 +37,11 @@ function Todo({ todo }) {
       t.isCompleted = true;
     } */
         t.isCompleted = !t.isCompleted;
+        if (t.isCompleted) {
+          showHideToast("لقد انجزت المهمة بنجاح");
+        } else {
+          showHideToast(" ! لقد أزلت المهمة من الانجازات");
+        }
       }
       return t;
     });
@@ -45,123 +50,15 @@ function Todo({ todo }) {
   }
 
   function handleDeleteClick() {
-    setShowDeleteDialog(true);
-  }
-
-  function handleDeleteClose() {
-    setShowDeleteDialog(false);
-  }
-
-  function handleDeleteConfirm() {
-    const deleteTodos = todos.filter((t) => {
-      // false dont return element true return element
-      /*   if (t.id == todo.id) {
-        return false;
-      } else {
-        return true;
-      } */
-      return t.id !== todo.id; // ShortCut to code that prev
-    });
-    setTodos(deleteTodos);
-    localStorage.setItem("todos", JSON.stringify(deleteTodos));
+    showDelete(todo);
   }
 
   function handleEditClick() {
-    setShowEditDialog(true);
+    showEdit(todo);
   }
 
-  function handleEditClose() {
-    setShowEditDialog(false);
-  }
-
-  function handleEditConfirm() {
-    const editTodos = todos.map((t) => {
-      if (t.id === todo.id) {
-        return { ...t, title: editTodo.title, details: editTodo.details };
-      } else {
-        return t;
-      }
-    });
-    setTodos(editTodos);
-    setShowEditDialog(false);
-    localStorage.setItem("todos", JSON.stringify(editTodos));
-  }
   return (
     <>
-      {/* Start Delete Modal */}
-      <Dialog
-        style={{ direction: "rtl" }}
-        onClose={handleDeleteClose}
-        open={showDeleteDialog}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          هل أنت متأكد من حذف المهمة ؟
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            لا يمكنك التراجع عن الحذف بعد ما تحذفها لإن احنا تطبيق غلبان على قد
-            حاله معندناش سلة مهملات واسترجاع وحوارات
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleDeleteClose}>إغلاق</Button>
-          <Button autoFocus onClick={handleDeleteConfirm}>
-            نعم ، إحذف وريحني
-          </Button>
-        </DialogActions>
-      </Dialog>
-      {/* End Delete Modal */}
-
-      {/* Start Edit Modal */}
-      <Dialog
-        style={{ direction: "rtl" }}
-        onClose={handleEditClose}
-        open={showEditDialog}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{todo.title}</DialogTitle>
-        <DialogContent>
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="name"
-            name="email"
-            label="عنوان المهمة"
-            fullWidth
-            variant="standard"
-            value={editTodo.title}
-            onChange={(e) => {
-              setEditTodo({ ...editTodo, title: e.target.value });
-            }}
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="name"
-            name="email"
-            label="التفاصيل"
-            fullWidth
-            variant="standard"
-            value={editTodo.details}
-            onChange={(e) => {
-              setEditTodo({ ...editTodo, details: e.target.value });
-            }}
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleEditClose}>إغلاق</Button>
-          <Button autoFocus onClick={handleEditConfirm}>
-            تأكيد
-          </Button>
-        </DialogActions>
-      </Dialog>
-      {/* End Edit Modal */}
-
       <Card
         className="todoCard"
         sx={{

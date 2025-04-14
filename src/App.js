@@ -2,9 +2,9 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { TodosContext } from "./contexts/todosContext";
-
 //Others
 import { useState } from "react";
+import { ToastContext, ToastProvider } from "./contexts/ToastContext";
 
 const theme = createTheme({
   typography: {
@@ -22,22 +22,26 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div
-        className="App"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "black",
-          height: "100vh",
-          direction: "rtl",
-          fontFamily: "Alexandria",
-        }}
-      >
-        <TodosContext.Provider value={{ todos, setTodos }}>
-          <TodoList />
-        </TodosContext.Provider>
-      </div>
+      <ToastProvider /*  */>
+        {" "}
+        {/* showHideToast:showHideToast */}
+        <div
+          className="App"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "black",
+            height: "100vh",
+            direction: "rtl",
+            fontFamily: "Alexandria",
+          }}
+        >
+          <TodosContext.Provider value={{ todos, setTodos }}>
+            <TodoList />
+          </TodosContext.Provider>
+        </div>
+      </ToastProvider>
     </ThemeProvider>
   );
 }

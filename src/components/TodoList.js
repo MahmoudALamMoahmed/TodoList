@@ -249,7 +249,7 @@ export default function TodoList() {
             {/* Start Todos */}
             <div
               style={{
-                maxHeight: "60vh",
+                maxHeight: "40vh",
                 overflow: "scroll",
                 /* display: "flex",
               flexDirection: "column",
@@ -300,7 +300,7 @@ export default function TodoList() {
             {/*End Input + Add Button */}
           </CardContent>
         </Card>
-        <Typography variant="h5" style={{ color: "gray" }}>
+        <Typography variant="h6" style={{ color: "gray" }}>
           <VisitorCounter />
         </Typography>
       </Container>

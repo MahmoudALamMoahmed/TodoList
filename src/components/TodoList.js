@@ -303,9 +303,6 @@ export default function TodoList() {
         <Typography variant="h5" style={{ color: "gray" }}>
           <VisitorCounter />
         </Typography>
-        <Typography variant="h5" style={{ color: "gray" }}>
-          <VisitorCounter />
-        </Typography>
       </Container>
     </>
   );

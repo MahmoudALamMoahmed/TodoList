@@ -8,6 +8,7 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
+import { Typography } from "@mui/material";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA4yYvO8LUMrHUIZUNYLncvPwmHhN3d6",
@@ -61,8 +62,15 @@ const VisitCounter = () => {
 
   return (
     <>
-      <p>👀 عدد الزيارات: {count}</p>
-      <p>نسألكم الدعاء لأبي (الأستاذ: علم محمد) بالرحمة والمغفرة</p>
+      {/* <p>👀 عدد الزيارات: {count}</p>
+      <p>نسألكم الدعاء لأبي (الأستاذ: علم محمد) بالرحمة والمغفرة</p> */}
+      <Typography variant="h6" style={{ marginTop: "10px" }}>
+        👀 عدد الزيارات: {count}
+      </Typography>
+
+      <Typography variant="h6" style={{ marginTop: "10px" }}>
+        نسألكم الدعاء لأبي (الأستاذ: علم محمد) بالرحمة والمغفرة
+      </Typography>
     </>
   );
 };

@@ -300,7 +300,7 @@ export default function TodoList() {
             {/*End Input + Add Button */}
           </CardContent>
         </Card>
-        <Typography variant="h6" style={{ color: "gray" }}>
+        <Typography style={{ color: "#C0C0C0" }}>
           <VisitorCounter />
         </Typography>
       </Container>

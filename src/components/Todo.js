@@ -75,9 +75,9 @@ function Todo({ todo, showDelete, showEdit }) {
                 {todo.title}
               </Typography>
               <Typography
-                variant="h6"
+                /* variant="h6" */
                 sx={{ textAlign: "right" }}
-                style={{ fontWeight: "100" }}
+                style={{ fontSize: "12px" }}
               >
                 {todo.details}
               </Typography>

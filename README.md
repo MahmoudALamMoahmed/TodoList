@@ -4,9 +4,9 @@ A simple and interactive Todo List application built with React. It allows users
 
 ### 🔗 Live Demo :
 
-<pre lang="markdown">https://todo-macoding.netlify.app/</pre>
+https://todo-macoding.netlify.app/
 
-### ⚙️ Features:
+### ⚙️ Features :
 
 ✅ Add new tasks
 

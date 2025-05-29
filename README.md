@@ -36,19 +36,33 @@ LocalStorage API
 
 📁 Project Structure :
 TodoList/
+
 ├── public/
+
 │   └── index.html
+
 ├── src/
+
 │   ├── components/
+
 │   │   ├── Header.js
+
 │   │   ├── TaskInput.js
+
 │   │   ├── TaskList.js
+
 │   │   └── TaskItem.js
+
 │   ├── App.js
+
 │   ├── index.js
+
 │   └── styles/
+
 │       └── App.css
+
 ├── package.json
+
 └── README.md
 
 🤝 Contributing

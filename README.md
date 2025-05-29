@@ -69,14 +69,14 @@ Make sure you have the following installed:
 #### │   ├── components/
 #### │   │   ├── Header.js
 #### │   │   ├── TaskInput.js
-### │   │   ├── TaskList.js
-### │   │   └── TaskItem.js
-### │   ├── App.js
-### │   ├── index.js
-### │   └── styles/
-### │       └── App.css
-### ├── package.json
-### └── README.md
+#### │   │   ├── TaskList.js
+#### │   │   └── TaskItem.js
+#### │   ├── App.js
+#### │   ├── index.js
+#### │   └── styles/
+#### │       └── App.css
+#### ├── package.json
+#### └── README.md
 
 
 ### 🤝 Contributing

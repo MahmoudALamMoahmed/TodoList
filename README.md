@@ -1,8 +1,10 @@
 📝 TodoList :
 A simple and interactive Todo List application built with React. It allows users to add, edit, and delete tasks, with all data stored locally in the browser for persistence.
 
+
 🔗 Live Demo :
 https://todo-macoding.netlify.app/
+
 
 ⚙️ Features:
 
@@ -16,13 +18,17 @@ https://todo-macoding.netlify.app/
 
 🖥️ Clean and responsive UI
 
+
 🚀 Getting Started :
+
 Prerequisites
+
 Make sure you have the following installed:
 
 Node.js (v14 or later)
 
 npm
+
 
 Installation :
 
@@ -44,7 +50,9 @@ npm start
 
 - The app will run at http://localhost:3000/
 
-🛠️ Built With
+
+🛠️ Built With :
+
 React
 
 JavaScript (ES6)
@@ -52,6 +60,7 @@ JavaScript (ES6)
 HTML5 & CSS3
 
 LocalStorage API
+
 
 📁 Project Structure :
 
@@ -85,14 +94,25 @@ TodoList/
 
 └── README.md
 
+
 🤝 Contributing
+
 Contributions are welcome! To contribute:
+
 1.Fork the repository
+
 2.Create a new branch:
+
 git checkout -b feature/feature-name
+
 3.Make your changes
+
 4.Commit your changes:
+
 git commit -m "Add new feature"
+
 5.Push to your branch:
+
 git push origin feature/feature-name
+
 Open a Pull Request

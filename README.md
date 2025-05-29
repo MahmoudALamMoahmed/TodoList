@@ -18,14 +18,23 @@ Node.js (v14 or later)
 npm
 
 Installation :
+
 1.Clone the repository
+
 git clone https://github.com/MahmoudALamMoahmed/TodoList.git
+
 Navigate to the project directory
+
 cd TodoList
+
 3.Install dependencies
+
 npm install
+
 Start the development server
+
 npm start
+
 The app will run at http://localhost:3000/
 
 🛠️ Built With :

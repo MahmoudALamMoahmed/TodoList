@@ -25,26 +25,26 @@ Prerequisites
 
 Make sure you have the following installed:
 
-Node.js (v14 or later)
+- Node.js (v14 or later)
 
-npm
+- npm
 
 
 Installation :
 
-1.Clone the repository
+1. Clone the repository
 
 git clone https://github.com/MahmoudALamMoahmed/TodoList.git
 
-2.Navigate to the project directory
+2. Navigate to the project directory
 
 cd TodoList
 
-3.Install dependencies
+3. Install dependencies
 
 npm install
 
-4.Start the development server
+4. Start the development server
 
 npm start
 
@@ -53,13 +53,13 @@ npm start
 
 🛠️ Built With :
 
-React
+- React
 
-JavaScript (ES6)
+- JavaScript (ES6)
 
-HTML5 & CSS3
+- HTML5 & CSS3
 
-LocalStorage API
+- LocalStorage API
 
 
 📁 Project Structure :
@@ -99,19 +99,19 @@ TodoList/
 
 Contributions are welcome! To contribute:
 
-1.Fork the repository
+1. Fork the repository
 
-2.Create a new branch:
+2. Create a new branch:
 
 git checkout -b feature/feature-name
 
-3.Make your changes
+3. Make your changes
 
-4.Commit your changes:
+4. Commit your changes:
 
 git commit -m "Add new feature"
 
-5.Push to your branch:
+5. Push to your branch:
 
 git push origin feature/feature-name
 

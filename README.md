@@ -63,12 +63,12 @@ Make sure you have the following installed:
 ### 📁 Project Structure :
 
 ### TodoList/
-### ├── public/
-### │   └── index.html
-### ├── src/
-### │   ├── components/
-### │   │   ├── Header.js
-### │   │   ├── TaskInput.js
+#### ├── public/
+#### │   └── index.html
+#### ├── src/
+#### │   ├── components/
+#### │   │   ├── Header.js
+#### │   │   ├── TaskInput.js
 ### │   │   ├── TaskList.js
 ### │   │   └── TaskItem.js
 ### │   ├── App.js

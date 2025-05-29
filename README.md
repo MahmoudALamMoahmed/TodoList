@@ -36,7 +36,7 @@ Make sure you have the following installed:
 
 2. Navigate to the project directory
 
-<pre lang="markdown">cd TodoList</pre>
+<pre>cd TodoList</pre>
 
 3. Install dependencies
 

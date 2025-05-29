@@ -3,7 +3,6 @@ A simple and interactive Todo List application built with React. It allows users
 
 
 ### 🔗 Live Demo :
-
 https://todo-macoding.netlify.app/
 
 ### ⚙️ Features :

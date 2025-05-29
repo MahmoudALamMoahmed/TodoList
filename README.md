@@ -43,6 +43,7 @@ Make sure you have the following installed:
 3. Install dependencies
 
 `npm install`
+<pre> ``` npm i ``` </pre>
 
 4. Start the development server
 

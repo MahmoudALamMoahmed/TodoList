@@ -78,6 +78,7 @@ Make sure you have the following installed:
 #### ├── package.json
 #### └── README.md
 
+<pre> ``` TodoList/ ├── public/ │ └── index.html ├── src/ │ ├── components/ │ │ ├── Header.js │ │ ├── TaskInput.js │ │ ├── TaskList.js │ │ └── TaskItem.js │ ├── App.js │ ├── index.js │ └── styles/ │ └── App.css ├── package.json └── README.md ``` </pre>
 
 ### 🤝 Contributing
 

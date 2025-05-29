@@ -36,7 +36,7 @@ Make sure you have the following installed:
 
 2. Navigate to the project directory
 
-<pre>cd TodoList</pre>
+<pre lang="markdown">cd TodoList</pre>
 
 3. Install dependencies
 
@@ -62,7 +62,7 @@ Make sure you have the following installed:
 
 ### 📁 Project Structure :
 
-```
+<pre>
 TodoList/
 ├── public/
 │   └── index.html
@@ -78,7 +78,7 @@ TodoList/
 │       └── App.css
 ├── package.json
 └── README.md
-```
+</pre>
 
 ### 🤝 Contributing
 

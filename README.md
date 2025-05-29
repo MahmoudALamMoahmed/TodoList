@@ -3,8 +3,8 @@ A simple and interactive Todo List application built with React. It allows users
 
 
 ### 🔗 Live Demo :
-https://todo-macoding.netlify.app/
 
+<pre lang="markdown">https://todo-macoding.netlify.app/</pre>
 
 ### ⚙️ Features:
 
@@ -33,23 +33,19 @@ Make sure you have the following installed:
 ### 🛠️ Installation :
 
 1. Clone the repository
-
-`git clone https://github.com/MahmoudALamMoahmed/TodoList.git`
+<pre lang="markdown">git clone https://github.com/MahmoudALamMoahmed/TodoList.git</pre>
 
 2. Navigate to the project directory
 
-`cd TodoList`
+<pre lang="markdown">cd TodoList</pre>
 
 3. Install dependencies
 
-`npm install`
-
-
-<pre lang="markdown">bash npm i</pre>
+<pre lang="markdown">npm install</pre>
 
 4. Start the development server
 
-`npm start`
+<pre lang="markdown">npm start</pre>
 
 - The app will run at http://localhost:3000/
 
@@ -106,16 +102,16 @@ Contributions are welcome! To contribute:
 
 2. Create a new branch:
 
-git checkout -b feature/feature-name
+<pre lang="markdown">git checkout -b feature/feature-name</pre>
 
 3. Make your changes
 
 4. Commit your changes:
 
-git commit -m "Add new feature"
+<pre lang="markdown">git commit -m "Add new feature"</pre>
 
 5. Push to your branch:
 
-git push origin feature/feature-name
+<pre lang="markdown">git push origin feature/feature-name</pre>
 
 Open a Pull Request

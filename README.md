@@ -44,9 +44,8 @@ Make sure you have the following installed:
 
 `npm install`
 
-<pre>npm i</pre>
 
-<pre>bash npm i</pre>
+<pre lang="markdown"> ```bash npm i ``` </pre>
 
 4. Start the development server
 

@@ -35,6 +35,7 @@ HTML5 & CSS3
 LocalStorage API
 
 📁 Project Structure :
+
 TodoList/
 
 ├── public/
